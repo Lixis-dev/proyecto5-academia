@@ -1,0 +1,81 @@
+@use "../../abstracts";
+
+body.c_ia {
+  main {
+    @include abstracts.flex-simple(2rem);
+
+    .contenedor {
+      @include abstracts.flex-simple(2rem);
+      .header {
+        @include abstracts.flex-simple;
+        &-title {
+          margin: 15px 0;
+          text-align: left;
+        }
+        &-subtitle {
+          text-align: left;
+          width: 80%;
+        }
+      }
+      .hero {
+        @include abstracts.flex-simple(1.5rem);
+        &__listado {
+          @include abstracts.flex-simple;
+          &__lista {
+            list-style: circle;
+          }
+        }
+        &__cita a {
+          font-size: 20px;
+          -webkit-text-fill-color: abstracts.$color-green;
+        }
+      }
+    }
+    .otros-cursos {
+      align-self: flex-end;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  body.c_ia {
+    main {
+      .contenedor {
+        .header {
+          padding: 42px;
+        }
+        .header-title {
+          width: 60%;
+        }
+        .header-subtitle {
+          width: 47%;
+        }
+      }
+      .hero {
+        padding: 42px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  body.c_ia {
+    main {
+      .contenedor {
+        .header {
+          padding: 72px;
+        }
+        .header-title {
+          width: 52%;
+        }
+        .header-subtitle {
+          width: 46%;
+        }
+      }
+      .hero {
+        padding: 72px;
+      }
+    }
+  }
+}

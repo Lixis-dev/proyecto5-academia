@@ -1,0 +1,50 @@
+@use "../abstracts";
+
+body.registro {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  main {
+    flex: 1;
+    .registro__div {
+      @include abstracts.flex-simple;
+      &__header {
+        padding: 1rem;
+        @media (min-width: 768px) {
+          padding: 2rem;
+        }
+      }
+      &__body__form {
+        @include abstracts.flex-simple;
+        &__contenido {
+          @include abstracts.flex-simple(1.5rem);
+          &-title {
+            padding: 10px;
+          }
+          &-p {
+            label {
+              padding: 10px;
+            }
+            input {
+              margin: 5px;
+              width: 98%;
+              padding: 5px;
+            }
+            textarea {
+              width: 98%;
+              height: 150px;
+              margin: 5px;
+              padding: 10px;
+            }
+          }
+        }
+        &-boton {
+          @include abstracts.flex-simple;
+          justify-content: center;
+          flex-direction: row;
+         
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,118 @@
+@use "../abstracts";
+body.contacto {
+  main {
+    @include abstracts.flex-simple(2rem);
+    .header {
+      p {
+        text-align: center;
+      }
+    }
+    .body {
+        border-radius: 0 0 15px 15px;
+      &__contact {
+        @include abstracts.flex-simple;
+        padding: 20px;
+        @media (min-width:768px){
+            padding: 32px 40px;
+        }
+
+        &__info {
+          @include abstracts.flex-simple;
+          li {
+            @include abstracts.flex-simple;
+
+            em {
+              color: abstracts.$color-blue;
+              font-weight: 600;
+              letter-spacing: 1px;
+            }
+            a {
+              font-size: 18px;
+              font-weight: 600;
+              letter-spacing: 2px;
+              color: abstracts.$color-blue;
+            }
+          }
+        }
+        &__form {
+          @include abstracts.flex-simple(0.5rem);
+          &__fiel {
+            @include abstracts.flex-simple;
+            &-title {
+              text-align: center;
+              width: 100%;
+              margin-bottom: 0.5rem;
+             font-weight: 600;
+             font-size: 24px;
+             @media (min-width: 768px) {
+                font-size: 32px;
+             }
+            }
+            &-p {
+                @include abstracts.flex-simple(0);
+                
+              input {
+                max-width: 100%;
+                border-radius: 3px;
+                padding: 5px 10px;
+                margin: 5px 0;
+              }
+              textarea {
+                max-width: 100%;
+                max-height: 120px;
+                border: none;
+                padding: 10px;
+                margin: 5px 0;
+              }
+            }
+          }
+          &__boton {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            
+
+            @media (min-width:768px){
+                justify-content: flex-end;
+                margin: 0 10px;
+            }
+
+            
+            
+            @media (min-width: 1024px){
+                margin: 0 12px
+            }
+            .enviar {
+              padding: 5px 20px;
+              @media (min-width:768px){
+                padding: 5px 30px;
+              }
+            }
+            .borrar {
+              padding: 5px 20px;
+              @media (min-width:768px){
+                padding: 5px 30px;
+              }
+            }
+          }
+        }
+      }
+    }
+    .mapa {
+      h2 {
+        margin: 1rem 0;
+      }
+      iframe{
+        height: 320px;
+        @media (min-width:768px){
+            height: 450px;
+        }
+        @media (min-width:1024px){
+            height: 550px;
+        }
+      }
+    }
+  }
+}
+
+

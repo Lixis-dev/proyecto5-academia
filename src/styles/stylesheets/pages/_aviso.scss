@@ -1,0 +1,50 @@
+@use '../abstracts';
+body.aviso{
+    * {
+        text-align: left;
+        
+    }
+    main{
+        padding: 32px 16px;
+        div{
+
+        @include abstracts.flex-simple(12px);
+        border-radius: 20px;
+            box-shadow: 1px 1px 10px -2px rgba(0, 0, 0, 0.4);
+            h1{
+                font-size: 30px;
+                letter-spacing: -1px;
+            }
+            h2{
+                font-size: 18px;
+            }
+            
+        }
+    }
+    footer p{
+        text-align: center;
+    }
+}
+
+@media (min-width:768px){
+body.aviso{
+    main{
+        padding: 32px 32px;
+        div{
+           padding: 80px 100px ;
+            
+        }
+    }
+}
+}
+@media (min-width:1024px){
+body.aviso{
+    main{
+        padding: 80px 120px;
+        div{
+           padding: 80px 100px ;
+            
+        }
+    }
+}
+}

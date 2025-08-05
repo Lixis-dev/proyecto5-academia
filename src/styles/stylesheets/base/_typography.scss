@@ -1,0 +1,59 @@
+@use '../abstracts';
+
+/**
+ * Basic typography style for copy text
+ */
+body {
+  color: abstracts.$text-color;
+  font: normal 125% / 1.4 abstracts.$text-font-stack;
+}
+
+* {
+  @include abstracts.responsitive-tipo-text;
+  
+}
+
+h1{
+  @include abstracts.responsitive-tipo-h1
+  
+}
+
+body.c_ciber .header__div-title span, body.c_ia .header-title{
+  @include abstracts.responsitive-tipo-h1big;
+  
+}
+body.not1 .header-title, body.not2 .header-title{
+@include abstracts.responsitive-tipo-h1big;
+}
+
+
+h2{
+  @include abstracts.responsitive-tipo-h2
+}
+
+h3 {
+  @include abstracts.responsitive-tipo-h3
+}
+
+h4 {
+  @include abstracts.responsitive-tipo-h4
+}
+
+p{
+  font-family: abstracts.$font-poppins;
+  text-align: justify;
+}
+
+a {
+  @include abstracts.responsitive-tipo-a;
+  font-family:abstracts.$font-roboto 
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-family: abstracts.$font-mont;
+  text-align: center;
+}
+.cursos__main__header__div-title span{
+  @include abstracts.responsitive-tipo-h1
+}
+

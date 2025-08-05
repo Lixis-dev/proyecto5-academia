@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+// 1. Vendors
+@use 'vendors/normalize';
+@use 'vendors/fontGoogle';
+
+// 2. Base stuff
+@use 'base/base';
+@use 'base/color';
+@use 'base/fonts';
+@use 'base/helpers';
+@use 'base/reset';
+@use 'base/typography';
+
+// 3. Layout-related sections
+@use 'layout/footer';
+@use 'layout/header';
+
+// 4. Components
+@use 'components/button';
+
+// 5. Pages
+@use 'pages/home';
+@use 'pages/quienes';
+@use 'pages/cursos';
+@use 'pages/cursos/ciberseguridad';
+@use 'pages/cursos/fullstack';
+@use 'pages/cursos/ia';
+@use 'pages/blog';
+@use 'pages/noticias/noticia1';
+@use 'pages/noticias/noticia2';
+@use 'pages/registro';
+@use 'pages/login';
+@use 'pages/contacto';
+@use 'pages/aviso';
+
+// 6. Themes
+@use 'themes/default';

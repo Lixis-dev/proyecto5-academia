@@ -1,0 +1,491 @@
+@use "../abstracts";
+
+/// color header{
+header {
+  background-color: white;
+}
+
+/// colores página home
+body.index {
+  background-color: abstracts.$color-white;
+
+  .hero__div__title span {
+    color: abstracts.$color-green;
+  }
+  .cursos {
+    background-image: url("/img/index/fondoindex.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .cursos__div__header {
+    color: white;
+  }
+  .cursos__div__body__div__art {
+    background-color: abstracts.$color-white;
+  }
+  .cursos__div__body__li {
+    background: linear-gradient(
+      190deg,
+      abstracts.$color-blue-light,
+      abstracts.$color-white,
+      abstracts.$color-white,
+      abstracts.$color-blue-light
+    );
+  }
+}
+
+/// colores página quienes somos
+body.quienes {
+  background-image: url("/img/equipo/quienes.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .quienes-body__cont__sect-title,
+  .quienes-body__cont__sect-title-h2 {
+    color: abstracts.$color-blue2;
+  }
+  .quienes-body__cont__sect__div__profesor {
+    background-color: abstracts.$color-white;
+    &__info-title {
+      color: abstracts.$color-blue2;
+    }
+    &__info-subtitle {
+      color: abstracts.$color-blue3;
+    }
+  }
+}
+
+/// colores página cursos
+body.cursos {
+  background-image: url("/img/cursos/fondo5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .cursos__main__header {
+    background-color: abstracts.$color-white;
+
+    &__div-title span {
+      color: abstracts.$color-green;
+    }
+    &__fot-img {
+      background-color: abstracts.$color-white;
+      border: 1px solid abstracts.$color-grey-light;
+      box-shadow: 1px 1px 10px -2px rgba(0, 0, 0, 0.9);
+      position: relative;
+    }
+  }
+  .cursos__main__header__fot-img.uno::before {
+    content: "";
+    width: 90%;
+    height: 98%;
+
+    position: absolute;
+    background-image: url("/img/cursos/letras-ia.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-1deg);
+    background-position-y: 100%;
+  }
+  .cursos__main__header__fot-img.dos::before {
+    content: "";
+    width: 90%;
+    height: 98%;
+    position: absolute;
+    background-image: url("/img/cursos/letras-ciber.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(1deg);
+    background-position-y: 100%;
+  }
+
+  .cursos__main__body__list__curso {
+    background: linear-gradient(
+      abstracts.$color-blue,
+      abstracts.$color-blue 25%,
+      abstracts.$color-white 25%
+    );
+    &-title {
+      color: abstracts.$color-white;
+    }
+  }
+}
+
+/// colores máster ia
+body.c_ia {
+  background-image: url("/img/cursos/fondo5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  main {
+    background-color: abstracts.$color-white;
+  }
+  .contenedor {
+    background-color: abstracts.$color-blue-dark;
+    border-radius: 25px;
+    .header {
+      background-image: url("/img/cursos/ia/ia.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      @media (min-width: 768px) {
+        background-size: contain;
+        background-position: 120px;
+      }
+      @media (min-width: 1024px) {
+        background-position: 100%;
+      }
+
+      &-title {
+        color: abstracts.$color-white;
+      }
+      &-subtitle {
+        color: abstracts.$color-green;
+      }
+    }
+    .linea {
+      contain: "";
+      width: 100%;
+      height: 5px;
+
+      background: linear-gradient(
+        90deg,
+        abstracts.$color-black,
+        abstracts.$color-black,
+        abstracts.$color-green,
+        abstracts.$color-blue-light,
+        abstracts.$color-green,
+        abstracts.$color-black,
+        abstracts.$color-black
+      );
+    }
+    .hero {
+      background: linear-gradient(
+        abstracts.$color-green,
+        abstracts.$color-blue-light2
+      );
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}
+
+/// colores máster full stack
+body.c_full {
+  background-image: url("/img/cursos/fondo5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  .header {
+    background-image: url("/img/cursos/full/fondo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    box-shadow: 1px 1px 10px -2px rgba(1, 1, 1, 0.5);
+    border-radius: 15px 15px 0 0;
+    &__contenido {
+      color: white;
+    }
+  }
+  .body {
+    background-color: abstracts.$color-white;
+    box-shadow: 1px 1px 10px -2px rgba(1, 1, 1, 0.5);
+    border-radius: 0 0 15px 15px;
+    &__header {
+      &__img {
+        box-shadow: 1px 1px 10px -2px rgba(1, 1, 1, 0.8);
+      }
+    }
+  }
+}
+
+/// colores máster ciberseguridad
+body.c_ciber {
+  background-image: url("/img/cursos/fondo5.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .header {
+    background-color: abstracts.$color-black;
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+    background-image: url("/img/cursos/ciber/fondo-header.png");
+    color: abstracts.$color-white;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: -30px;
+    background-size: 92%;
+    padding: 20px;
+    box-shadow: 1px 1px 10px -2px rgba(1, 1, 1, 0.8);
+  }
+  .body {
+    background-color: abstracts.$color-white;
+    border-radius: 0 0 25px 25px;
+    box-shadow: 1px 1px 10px -2px rgba(1, 1, 1, 0.8);
+
+    &__img figure {
+      box-shadow: 1px 1px 10px -2px abstracts.$color-black;
+      border: 2px solid abstracts.$color-blue3;
+      background: linear-gradient(
+        abstracts.$color-blue,
+        abstracts.$color-white,
+        abstracts.$color-blue
+      );
+      img {
+        background-color: abstracts.$color-white;
+        box-shadow: 1px 1px 10px -2px abstracts.$color-blue3;
+        border: 2px solid abstracts.$color-blue3;
+        padding: 3px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) {
+  body.c_ciber .header {
+    padding: 60px;
+    background-position-x: 130px;
+  }
+}
+@media (min-width: 1024px) {
+  body.c_ciber .header {
+    padding: 80px;
+  }
+}
+
+/// colores blog{
+body.blog {
+  main {
+    div.header {
+      background: linear-gradient(
+        190deg,
+        abstracts.$color-blue-dark,
+        abstracts.$color-blue,
+        abstracts.$color-blue-light,
+        abstracts.$color-blue,
+        abstracts.$color-blue-dark
+      );
+
+      box-shadow: 1px 1px 10px -2px rgba(1, 1, 1, 0.5);
+      .contenido__header-title {
+        color: abstracts.$color-white;
+        text-shadow: 1px 0 0 abstracts.$color-blue3,
+          -1px 0 0 abstracts.$color-blue-light,
+          0 1px 0 abstracts.$color-blue-light, 0 -1px 0 abstracts.$color-blue3;
+      }
+      .contenido__header-subtitle {
+        color: abstracts.$color-blue-light;
+        font-weight: 500;
+      }
+      .contenido__header-img img {
+        box-shadow: 1px 1px 10px -2px rgba(1, 1, 1, 0.9);
+      }
+    }
+    .contenido__body__articulos__art {
+      background: linear-gradient(abstracts.$color-grey-light, white);
+      box-shadow: 1px 1px 10px -2px rgba(1, 1, 1, 0.5);
+      border-radius: 10px;
+    }
+  }
+}
+@media (min-width: 768px) {
+  body.blog main div.header {
+    border-radius: 120px 0 120px;
+  }
+}
+
+/// colores noticia
+body.not1 {
+  .contenedor {
+    background-image: url("/img/noticias/noticias1/fondonot1.1.png");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    color: abstracts.$color-white;
+    strong {
+      color: abstracts.$color-green;
+    }
+  }
+}
+
+/// colores noticia 2
+body.not2 {
+  background-image: url("/img/noticias/noticias2/fondonot2.png");
+  main {
+    .contenedor {
+      box-shadow: 2px 2px 10px 2px rgba(1, 1, 1, 0.5);
+      border-radius: 25px 25px 0 0;
+    }
+    .header {
+      border-radius: 25px 25px 0 0;
+      background: linear-gradient(
+        abstracts.$color-black,
+        abstracts.$color-blue3,
+        abstracts.$color-blue-light,
+        abstracts.$color-white
+      );
+
+      &-title {
+        color: abstracts.$color-blue-light2;
+      }
+      &-img {
+        box-shadow: 2px 2px 10px 2px rgba(1, 1, 1, 0.5);
+      }
+    }
+    .hero {
+      background-color: abstracts.$color-white;
+      &__listado__lista {
+        padding-left: 1rem;
+        padding-right: 1rem;
+      }
+      &__listado__lista strong {
+        color: abstracts.$color-green;
+      }
+      * {
+        color: abstracts.$color-blue2;
+      }
+    }
+    .more {
+      background-color: abstracts.$color-white;
+    }
+  }
+}
+
+/// colores página registro
+body.registro {
+  background-image: url("/img/registro/fondo.png");
+  background-position: center;
+  background-size: cover;
+  .registro__div {
+    background-color: abstracts.$color-white;
+    box-shadow: 1px 1px 10px -2px rgba(1, 1, 1, 0.5);
+    &__header {
+      background: linear-gradient(
+        190deg,
+        abstracts.$color-blue-light,
+        abstracts.$color-white,
+        abstracts.$color-white,
+        abstracts.$color-blue-light
+      );
+      &-title {
+        color: abstracts.$color-blue2;
+      }
+      &-subtitle {
+        color: abstracts.$color-blue;
+      }
+    }
+  }
+}
+
+/// colores página login
+body.login {
+  background: linear-gradient(
+    abstracts.$color-blue,
+    abstracts.$color-grey-light,
+    abstracts.$color-white
+  );
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+  .login__d {
+    background-color: abstracts.$color-white;
+
+    background: linear-gradient(
+      abstracts.$color-blue 22%,
+      abstracts.$color-white 22%
+    );
+    box-shadow: 1px 1px 10px -2px rgba(0, 0, 0, 0.2);
+    @media (min-width: 768px) {
+      background: linear-gradient(
+        abstracts.$color-blue 25%,
+        abstracts.$color-white 25%
+      );
+    }
+    &__header-title {
+      color: abstracts.$color-white;
+    }
+    &__header-subtitle {
+      color: abstracts.$color-blue3;
+    }
+  }
+}
+
+/// colores página contacto
+body.contacto {
+  main {
+    .header {
+      background-image: url("/img/contacto/fondo.png");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      color: abstracts.$color-white;
+      border-radius: 15px 15px 0 0;
+    }
+
+    .body {
+      background-color: abstracts.$color-blue-light2;
+
+      box-shadow: 1px 1px 10px -2px rgba(1, 1, 1, 0.2);
+      &__contact__form {
+        color: abstracts.$color-white;
+        background: linear-gradient(
+          abstracts.$color-blue,
+          abstracts.$color-blue3
+        );
+        border-radius: 5px;
+        fieldset {
+          border: none;
+        }
+        label {
+          color: abstracts.$color-white;
+        }
+        &__boton {
+          .enviar {
+            color: abstracts.$color-black;
+          }
+          .borrar {
+            background: linear-gradient(
+              abstracts.$color-blue,
+              abstracts.$color-blue2,
+              abstracts.$color-blue
+            );
+            border: solid abstracts.$color-blue;
+            color: abstracts.$color-white;
+          }
+        }
+      }
+    }
+    .mapa iframe{
+       
+        box-shadow: 1px 1px 10px -2px rgba(1, 1, 1, 0.5);
+      
+    }
+  }
+}
+
+/// aviso legal
+.aviso {
+  background: linear-gradient(
+    abstracts.$color-blue,
+    abstracts.$color-grey-light,
+    abstracts.$color-white
+  );
+
+  background-size: 100%;
+  background-repeat: no-repeat;
+
+  main div {
+    background-color: abstracts.$color-white;
+  }
+}
+
+/// colores footer
+footer {
+  background-color: abstracts.$color-blue;
+  color: abstracts.$color-white;
+  a {
+    color: abstracts.$color-white;
+    text-decoration: underline;
+    @include abstracts.on-event {
+      opacity: 0.7;
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@use "../../abstracts";
+
+body.c_ciber {
+  .contenedor {
+    @include abstracts.flex-simple(2rem);
+    .otros_cursos {
+      align-self: flex-end;
+    }
+  }
+  .header__div {
+    @include abstracts.flex-simple();
+    &-title {
+      margin: 0;
+      @include abstracts.flex-simple(0);
+      text-align: left;
+    }
+    &-subtitle {
+      text-align: left;
+    }
+  }
+  .body {
+    @include abstracts.flex-simple(2rem);
+    &__listado {
+      @include abstracts.flex-simple(1.2rem);
+      li {
+        position: relative;
+        padding-left: 25px;
+      }
+      li::before {
+        content: "";
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        background-image: url("../../../../../public/img/cursos/ciber/shield-check.svg");
+        background-repeat: no-repeat;
+        left: 0;
+        background-position-y: 2px;
+        background-size: 80%;
+      }
+    }
+    &__img {
+      @include abstracts.flex-simple(10px);
+      flex-direction: row;
+      figure {
+        padding: 5px;
+      }
+
+      .img1 {
+        transform: rotate(-3deg);
+        margin-top: 25px;
+        img {
+          transform: rotate(-3deg);
+        }
+      }
+      .img2 {
+        margin-bottom: 25px;
+      }
+      .img3 {
+        transform: rotate(4deg);
+        margin-top: 25px;
+        img {
+          transform: rotate(4deg);
+        }
+      }
+    }
+  }
+  .footer a {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
+  body.c_ciber main {
+    padding: 48px;
+    .header__div-subtitle {
+      width: 56%;
+    }
+    .body {
+      padding: 32px 50px;
+    }
+  }
+}
+@media (min-width: 1024px) {
+  body.c_ciber main {
+    .header__div-subtitle {
+      width: 37%;
+    }
+    .body {
+      padding: 60px 80px;
+    }
+  }
+}

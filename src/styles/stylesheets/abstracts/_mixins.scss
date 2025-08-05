@@ -1,0 +1,120 @@
+// -----------------------------------------------------------------------------
+// This file contains all application-wide Sass mixins.
+// -----------------------------------------------------------------------------
+
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+      @content;
+    }
+  }
+}
+
+/// Make a context based selector a little more friendly
+/// @author Kitty Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+/// tipografia 
+@mixin tipo ($font-s:16px, $font-w:normal, $ls:normal){
+  font-size: $font-s;
+  font-weight: $font-w;
+  letter-spacing: $ls;
+}
+
+@mixin responsitive-tipo-h1 {
+  @include tipo(30px, bold);
+  @media (min-width:768px){
+    @include tipo(36px, bold);
+  }
+  @media (min-width: 1024px){
+    @include tipo(40px, bold);
+  }
+}
+
+@mixin responsitive-tipo-h1big {
+  @include tipo(36px, bold);
+  @media (min-width:768px){
+    @include tipo(46px, bold);
+  }
+  @media (min-width: 1024px){
+    @include tipo(60px, bold);
+  }
+}
+
+@mixin responsitive-tipo-h2 {
+  @include tipo(28px, bold);
+  @media (min-width:768px){
+    @include tipo(32px, bold);
+  }
+  @media (min-width: 1024px){
+    @include tipo(36px, bold);
+  }
+}
+@mixin responsitive-tipo-h3 {
+  @include tipo(24px, bold);
+  @media (min-width:768px){
+    @include tipo(26px, bold);
+  }
+  @media (min-width: 1024px){
+    @include tipo(28px, bold);
+  }
+}
+@mixin responsitive-tipo-h4 {
+  @include tipo(20px, bold);
+  @media (min-width:768px){
+    @include tipo(22px, bold);
+  }
+  @media (min-width: 1024px){
+    @include tipo (24px, bold);
+  }
+}
+@mixin responsitive-tipo-text {
+  @include tipo;
+  @media (min-width: 1024px){
+    @include tipo (18px);
+  }
+}
+
+@mixin responsitive-tipo-a {
+  @include tipo;
+  
+}
+
+
+/// display flex 
+@mixin flex-simple ($gap: 1rem, $direction:column){
+  display: flex;
+  flex-direction: $direction;
+  gap: $gap;
+
+}
+
+@mixin flex($just:flex-start, $aling: flex-start, $gap:1rem){
+  display: flex;
+  justify-content: $just;
+  align-content: $aling;
+  gap: $gap;
+}
+
+@mixin grid(){
+  display: grid;
+}

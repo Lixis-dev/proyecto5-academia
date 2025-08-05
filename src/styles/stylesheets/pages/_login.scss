@@ -1,0 +1,45 @@
+@use "../abstracts";
+
+body.login {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex: 1;
+
+    .login__d {
+      @include abstracts.flex-simple;
+      max-width: 600px;
+
+      &__header-subtitle {
+        text-align: center;
+        padding: 1rem 0;
+      }
+      &__body__form {
+        @include abstracts.flex-simple;
+
+        &__fiel {
+          @include abstracts.flex-simple();
+          padding-bottom: 30px;
+          &-title {
+            padding: 0 10px 10px 10px;
+          }
+          &-p {
+            @include abstracts.flex-simple();
+            text-align: left;
+            input {
+              width: 98%;
+            }
+          }
+        }
+
+        &-boton {
+          @include abstracts.flex-simple;
+          justify-content: center;
+          flex-direction: row;
+        }
+      }
+    }
+  }
+}

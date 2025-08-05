@@ -1,0 +1,35 @@
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the button component.
+// -----------------------------------------------------------------------------
+@use '../abstracts';
+button{
+    background: linear-gradient(
+          190deg,
+          abstracts.$color-blue-light,
+          abstracts.$color-white,
+          abstracts.$color-white,
+          abstracts.$color-blue-light
+        );
+        border-radius: 5px;
+        border: 1px solid abstracts.$color-blue-light;
+        padding: 5px 30px;
+        color: abstracts.$color-blue3;
+        &:hover {
+          opacity: 0.6;
+        }
+}
+
+.button-blue{
+  background: linear-gradient(
+          190deg,
+          abstracts.$color-blue-light,
+          abstracts.$color-white,
+          abstracts.$color-white,
+          abstracts.$color-blue-light
+        );
+        padding: 10px 30px;
+        box-shadow: 1px 1px 10px -2px abstracts.$color-green;
+       border-radius: 10px; 
+       color: abstracts.$color-blue;
+       border: 1px solid abstracts.$color-blue-light;
+}

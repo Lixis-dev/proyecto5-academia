@@ -1,0 +1,199 @@
+// -----------------------------------------------------------------------------
+// This file contains styles that are specific to the home page.
+// -----------------------------------------------------------------------------
+@use "../abstracts";
+
+body.index {
+  /// section hero
+  .hero {
+    background-image: url("/img/index/quienes.png");
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: top;
+    &__div {
+      &__title {
+        color: abstracts.$color-white;
+
+        span {
+          @include abstracts.responsitive-tipo-h1;
+        }
+      }
+      &__subtitle {
+        color: abstracts.$color-white;
+        text-align: center;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  /// section quienes somos
+  .quienes__div {
+    @include abstracts.flex-simple;
+
+    &__div {
+      @include abstracts.flex-simple(1.5rem);
+
+      &__title {
+        margin: 1rem 0;
+      }
+      &__cont {
+        &-nav {
+          margin-top: 10px;
+          text-align: right;
+          padding: 5px;
+        }
+      }
+    }
+    &__img img {
+      height: auto;
+      object-fit: cover;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .quienes__div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-content: center;
+      gap: 3rem;
+      &__img {
+        padding-top: 25px;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    .quienes__div__div {
+      justify-content: center;
+    }
+  }
+
+  /// Section Cursos
+
+  .cursos__div {
+    &__header {
+      margin-bottom: 20px;
+      &-title {
+        margin: 1rem 0;
+      }
+      &-subtitle {
+        text-align: center;
+        padding-bottom: 10px;
+      }
+    }
+    &__body {
+      @include abstracts.flex-simple;
+      &__div {
+        @include abstracts.flex-simple;
+
+        &__art {
+          box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+          @include abstracts.flex-simple(1.5rem);
+
+          align-items: center;
+          &-img {
+            box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.3);
+            transform: rotate(3deg);
+          }
+          &-div {
+            @include abstracts.flex-simple;
+
+            justify-content: space-between;
+
+            &-title {
+              padding: 0 10px;
+            }
+
+            &-a {
+              width: 100%;
+              text-align: center;
+              background-color: abstracts.$color-blue;
+              color: abstracts.$color-white;
+              border-radius: 5px;
+              padding: 5px;
+              &:hover {
+                opacity: 0.8;
+              }
+              &:focus {
+                opacity: 0.8;
+              }
+              &:active {
+                opacity: 0.8;
+              }
+            }
+          }
+          &-img2 {
+            box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.3);
+            transform: rotate(-3deg);
+
+            border-radius: 5px;
+          }
+        }
+      }
+      .more {
+        text-align: center;
+        border-radius: 5px;
+        .cursos__div__body__li-subtitle {
+          text-align: center;
+        }
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .cursos__div__body__div {
+      flex-direction: row;
+      &__art {
+        justify-content: space-between;
+      }
+    }
+  }
+
+  /// blog
+  .blog {
+    &__c {
+      @include abstracts.flex-simple;
+      &__div {
+        @include abstracts.flex-simple;
+        &__not {
+          @include abstracts.flex-simple;
+          box-shadow: 1px 1px 10px -5px rgba(0, 0, 0, 0.3);
+          border-radius: 10px;
+          &__div {
+            &-title {
+              margin: 25px 0;
+            }
+            &-a {
+              text-align: right;
+              padding: 10px;
+            }
+          }
+        }
+      }
+      .more p {
+        text-align: center;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    .blog__c {
+      &__div {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+        &__not {
+          @include abstracts.flex-simple;
+          justify-content: space-between;
+        }
+      }
+      .more {
+        padding: 10px 40px;
+        p {
+          text-align: right;
+        }
+        a {
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
